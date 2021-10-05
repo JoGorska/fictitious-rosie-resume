@@ -1,5 +1,5 @@
 # Contents
-[Fantastic Autos](#fantastic-autos)
+[Fictious Rosie Resume](#fictious-rosie-resume)
 
 [UX](#ux)
 + [User Stories](#user-stories)
@@ -31,7 +31,7 @@
 + [Content](#content)
 + [Media](#media)
 
-# Fantastic Autos
+# Fictious Rosie Resume
 
 
 Click [here](???) to live site.  
