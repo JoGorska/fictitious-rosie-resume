@@ -61,7 +61,9 @@
                         </h3>
                     </div>
                 </div>
+                <!-- div to hold the map from google maps -->
                 <div id="map"></div>
+
             </div>
             <div class="col-md-8 bg-color-groups">
                 <div class="row">
@@ -196,9 +198,18 @@
         </div>
 
     </footer>
+    <!-- this link enables markers clusters -->
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDHHyac2SiOYPNYxXMK7rqJjnB8nCaaxE&callback=initMap"></script>
+
+    <!--
+    this link below is copied from tutorial Marker Clustering from Google API page
+    https://developers.google.com/maps/documentation/javascript/marker-clustering#maps_marker_clustering-html 
+    defer - helps with loading times if the script is placed in the head element
+    -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzPW6lkuwv5qyetk1FR3_eB6tqA4BzSRA&callback=initMap"></script>
     <script src="assets/js/maps.js"></script>
+
+
 </body>
 
 </html>
