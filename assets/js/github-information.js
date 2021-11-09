@@ -30,12 +30,15 @@ function fetchGitHubInformation(event) {
             <img src="assets/css/loader.gif" alt="loading..." />
         </div>`);
     $.when(
-        $.getJSON(`https://api.github.com/users/${username}`)
+        $.getJSON(`https://api.github.com/users/${username}`),
+        $.getJSON(`https://api.github.com/users/${username}/repos`)
     ).then(
         // if normal response than displays data for the user
-        function(response) {
-            var userData = response;
+        function(firstResponse, secondResponse) {
+            var userData = firstResponse[0];
+            var repoData = secondResponse[0];
             $("#gh-user-data").html(userInformationHTML(userData));
+            $("#gh-repo-data").html(repoInformationHTML(repoData));
         // handles error response within then
         }, function(errorResponse) {
             if (errorResponse.status === 404) {
