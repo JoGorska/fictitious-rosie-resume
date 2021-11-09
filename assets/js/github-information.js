@@ -39,6 +39,11 @@ function repoInformationHTML(repos) {
 
 function fetchGitHubInformation(event) {
 
+    //this clears the divs from any data that might have been left after previous search
+
+    $("#gh-user-data").html("");
+    $("#gh-repo-data").html("");
+
     var username = $("#gh-username").val();
     if (!username) {
         $("#gh-user-data").html(`<h2>Please enter a GitHub username</h2>`);
@@ -69,3 +74,7 @@ function fetchGitHubInformation(event) {
             }
         });
 }
+
+// octocat is a default word in input field. to fetch the data using this phrase we can use document ready - this will fetch information when the DOM is fully loaded
+
+$(document).ready(fetchGitHubInformation);
