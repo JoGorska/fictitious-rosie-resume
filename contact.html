@@ -14,6 +14,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
     <!--my stylesheet-->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- email js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+        // copied from email js dashboard -> integration
+        emailjs.init("user_RuWn0O4dEv8tUzAftvkaW");
+        })();
+        // example copied from email js https://www.emailjs.com/docs/sdk/send/
+        var templateParams = {
+            name: 'Aaron',
+            notes: 'Project I want is...'
+        };
+ 
+    emailjs.send('fictitious-rosie-resume', 'template_w8ytkqk', templateParams)
+        .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        }, function(error) {
+        console.log('FAILED...', error);
+        });
+    </script>
     <title>Rosie</title>
 </head>
 <body>
